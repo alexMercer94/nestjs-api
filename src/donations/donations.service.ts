@@ -16,8 +16,12 @@ export class DonationsService {
    * Return everything about Donations Table
    * @returns
    */
-  async findAll() {
-    return this.prisma.donation.findMany();
+  async findAll(orderBy?: { field?: string; direction?: string }) {
+    const { field = 'cretedAt', direction = 'desc' } = orderBy || {};
+
+    return this.prisma.donation.findMany({
+      orderBy: { [field]: direction },
+    });
   }
 
   /**
