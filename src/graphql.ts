@@ -8,7 +8,13 @@
 /* tslint:disable */
 /* eslint-disable */
 export class CreateDonationInput {
-    exampleField?: Nullable<number>;
+    count: number;
+    displayName: string;
+    email: string;
+    mobile?: Nullable<string>;
+    team?: Nullable<string>;
+    message?: Nullable<string>;
+    createdAt?: Nullable<DateTime>;
 }
 
 export class Donation {

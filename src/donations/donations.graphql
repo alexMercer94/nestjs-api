@@ -12,8 +12,13 @@ type Donation {
 }
 
 input CreateDonationInput {
-  # Example field (placeholder)
-  exampleField: Int
+  count: Int!
+  displayName: String!
+  email: String!
+  mobile: String
+  team: String
+  message: String
+  createdAt: DateTime
 }
 
 type Query {
